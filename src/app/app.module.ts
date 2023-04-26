@@ -8,6 +8,7 @@ import { EntradasComponent } from './components/entradas/entradas.component';
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { TrabajaConNosotrosComponent } from './components/trabaja-con-nosotros/trabaja-con-nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { FooterComponent } from './components/footer/footer.component';
 const Route:Routes=[ 
   {path:'',component:InicioComponent},
   {path:'entradas',component:EntradasComponent},
@@ -25,14 +26,17 @@ const Route:Routes=[
     EntradasComponent,
     SobreNosotrosComponent,
     TrabajaConNosotrosComponent,
-    ContactoComponent
+    ContactoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(Route)
   ],
+  
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
