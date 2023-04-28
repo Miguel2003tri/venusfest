@@ -1,1 +1,40 @@
-<p>contacto works!</p>
+<div class="container mt-4">
+
+    <h2 class="text-center">Contacto</h2>
+</div>
+<div class="container">
+    <div class="pb-5 pt-3 ps-5 pe-5">
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label fw-bold text-dark">Nombre</label>
+                <input type="text" class="form-control rounded-3" id="nombre" placeholder="Ej. Juan Pérez">
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label fw-bold text-dark">Teléfono</label>
+                <input type="tel" class="form-control rounded-3" id="telefono" placeholder="Ej. +34 123 456 789">
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label fw-bold text-dark">Correo electrónico</label>
+                <input type="email" class="form-control rounded-3" id="correo" placeholder="Ej. juan.perez@gmail.com">
+            </div>
+            <div class="mb-3">
+                <label for="asunto" class="form-label fw-bold text-dark">Asunto</label>
+                <input type="text" class="form-control rounded-3" id="asunto"
+                    placeholder="Ej. Solicitud de información">
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label fw-bold text-dark">Mensaje</label>
+                <textarea class="form-control rounded-3" id="mensaje" rows="3"></textarea>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="aceptar-cookies">
+                <label class="form-check-label text-dark" for="aceptar-cookies">
+                    Acepto la política de cookies
+                </label>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
