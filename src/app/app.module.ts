@@ -9,6 +9,8 @@ import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotr
 import { TrabajaConNosotrosComponent } from './components/trabaja-con-nosotros/trabaja-con-nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
+
 const Route:Routes=[ 
   {path:'',component:InicioComponent},
   {path:'entradas',component:EntradasComponent},
@@ -32,7 +34,8 @@ const Route:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(Route)
+    RouterModule.forRoot(Route),
+    HttpClientModule ,
   ],
   
   providers: [],

@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { Component,OnInit  } from '@angular/core';
+import { MyApiService } from 'src/app/services/my-api.services';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit {
+  data: any;
 
+  constructor(private myApiService: MyApiService) { }
+
+  ngOnInit(): void {
+    this.myApiService.getData().subscribe(response => {
+      this.data = response;
+    });
+  }
 }
+
+
