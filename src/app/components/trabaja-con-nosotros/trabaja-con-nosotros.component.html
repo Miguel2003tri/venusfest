@@ -4,63 +4,77 @@
 </div>
 <div class="container">
     <div class="pb-5 pt-5 ps-5 pe-5">
-        <form>
+        <form >
             <div class="mb-3">
-                <label for="nombre" class="form-label text-dark">Nombre:</label>
-                <input type="text" class="form-control rounded-3" id="nombre" name="nombre" required>
+                <label for="nombre"  class="form-label text-dark">Nombre:</label>
+                <input type="text" class="form-control rounded-3" id="nombre" name="nombre"  [(ngModel)]="artista.nombre" required>
             </div>
             <div class="mb-3">
                 <label for="nombre-artistico" class="form-label text-dark">Nombre artistico</label>
                 <input type="text" class="form-control rounded-3" id="nombre-artistico" name="nombre-artistico"
-                    required>
+                [(ngModel)]="artista.nombre_artistico"  required>
             </div>
             <div class="mb-3">
                 <label for="correo" class="form-label text-dark">Correo electrónico:</label>
-                <input type="email" class="form-control rounded-3" id="correo" name="correo" required>
+                <input type="email" class="form-control rounded-3" id="correo" name="correo" [(ngModel)]="artista.email"   required>
             </div>
             <div class="mb-3">
                 <label for="telefono" class="form-label text-dark">Teléfono:</label>
-                <input type="tel" class="form-control rounded-3" id="telefono" name="telefono" required>
+                <input type="tel" class="form-control rounded-3" id="telefono" name="telefono" [(ngModel)]="artista.telf"   required>
             </div>
             <div class="mb-3">
                 <label for="direccion" class="form-label text-dark">Dirección postal:</label>
-                <input type="text" class="form-control rounded-3" id="direccion" name="direccion" required>
+                <input type="text" class="form-control rounded-3" id="direccion" name="direccion" [(ngModel)]="artista.direccion_postal"   required>
             </div>
             <div class="mb-3">
                 <label for="descripcion" class="form-label text-dark">Descripción del proyecto:</label>
                 <textarea class="form-control rounded-3" id="descripcion" name="descripcion" rows="4" cols="50"
-                    required></textarea>
+                    [(ngModel)]="artista.descripcion_proyecto"   required></textarea>
             </div>
             <div class="mb-3">
                 <label for="redes" class="form-label text-dark">Enlaces a redes sociales:</label>
-                <input type="url" class="form-control rounded-3" id="redes" name="redes">
+                <input type="url" class="form-control rounded-3" id="redes" name="redes" [(ngModel)]="artista.enlaces_redes_sociales"  >
             </div>
             <div class="mb-3">
                 <label for="experiencia" class="form-label text-dark">Experiencia previa:</label>
                 <textarea class="form-control rounded-3" id="experiencia" name="experiencia" rows="4"
-                    cols="50"></textarea>
+                    cols="50" [(ngModel)]="artista.experiencia_previa"  ></textarea>
             </div>
             <div class="mb-3">
                 <label for="tecnico" class="form-label text-dark">Requerimientos técnicos:</label>
-                <textarea class="form-control rounded-3" id="tecnico" name="tecnico" rows="4" cols="50"></textarea>
+                <textarea class="form-control rounded-3" id="tecnico" name="tecnico" rows="4" cols="50" [(ngModel)]="artista.requerimientos_tecnicos"  ></textarea>
             </div>
             <div class="mb-3">
                 <label for="disponibilidad" class="form-label text-dark">Disponibilidad:</label>
-                <input type="text" class="form-control rounded-3" id="disponibilidad" name="disponibilidad">
+                <input type="text" class="form-control rounded-3" id="disponibilidad" name="disponibilidad" [(ngModel)]="artista.disponibilidad"  >
             </div>
             <div class="mb-3">
                 <label for="condiciones" class="form-label text-dark">Condiciones de participación:</label>
                 <textarea class="form-control rounded-3" id="condiciones" name="condiciones" rows="4"
-                    cols="50"></textarea>
+                    cols="50" [(ngModel)]="artista.condiciones_participacion"  ></textarea>
             </div>
+           
+
+            <div class="mb-3">
+                <label for="imagen" class="form-label text-dark">Imagen local:</label>
+                <input type="file" class="form-control" id="imagen" name="imagen" [(ngModel)]="artista.foto_artista">
+            </div>
+            
+            <div class="mb-3">
+                <label for="imagenUrl" class="form-label text-dark">Enlace de imagen:</label>
+                <input type="text" class="form-control" id="imagenUrl" name="imagenUrl" [(ngModel)]="artista.foto_artista" placeholder="URL de la imagen">
+            </div>
+            
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="cookies" required>
+                <input class="form-check-input" type="checkbox" value="" id="cookies"  required>
                 <label class="form-check-label text-dark" for="cookies">
                     Acepto el uso de cookies.
                 </label>
             </div>
+            
+
             <div class="text-center mt-3">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary" (click)="enviarDatos()" >Enviar</button>
             </div>
         </form>
     </div>
