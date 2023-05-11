@@ -28,7 +28,7 @@ export class TrabajaConNosotrosComponent implements OnInit  {
   constructor(private http: MyApiService, public router: Router) {}
   ngOnInit(): void {}
 
-  enviarDatos() {
+  enviarDatosNosotros() {
     this.http.createArtista(this.artista)
     .subscribe((data) => {
       this.router.navigate(['/'])

@@ -7,23 +7,23 @@
       <form>
         <div class="mb-3">
           <label for="nombre" class="form-label fw-bold text-dark">Nombre</label>
-          <input type="text" class="form-control rounded-3" id="nombre" placeholder="Ej. Juan Pérez">
+          <input type="text" class="form-control rounded-3" id="nombre" placeholder="Ej. Juan Pérez" [(ngModel)]="contacto.nombre"required>
         </div>
         <div class="mb-3">
           <label for="telefono" class="form-label fw-bold text-dark">Teléfono</label>
-          <input type="tel" class="form-control rounded-3" id="telefono" placeholder="Ej. +34 123 456 789">
+          <input type="tel" class="form-control rounded-3" id="telefono" placeholder="Ej. +34 123 456 789" [(ngModel)]="contacto.telf"required>
         </div>
         <div class="mb-3">
           <label for="correo" class="form-label fw-bold text-dark">Correo electrónico</label>
-          <input type="email" class="form-control rounded-3" id="correo" placeholder="Ej. juan.perez@gmail.com">
+          <input type="email" class="form-control rounded-3" id="correo" placeholder="Ej. juan.perez@gmail.com" [(ngModel)]="contacto.email"required>
         </div>
         <div class="mb-3">
           <label for="asunto" class="form-label fw-bold text-dark">Asunto</label>
-          <input type="text" class="form-control rounded-3" id="asunto" placeholder="Ej. Solicitud de información">
+          <input type="text" class="form-control rounded-3" id="asunto" placeholder="Ej. Solicitud de información" [(ngModel)]="contacto.asunto"required>
         </div>
         <div class="mb-3">
           <label for="mensaje" class="form-label fw-bold text-dark">Mensaje</label>
-          <textarea class="form-control rounded-3" id="mensaje" rows="3"></textarea>
+          <textarea class="form-control rounded-3" id="mensaje" rows="3" [(ngModel)]="contacto.mensaje" required></textarea>
         </div>
         <div class="form-check mb-3">
           <input class="form-check-input" type="checkbox" id="aceptar-cookies">
@@ -32,7 +32,7 @@
           </label>
         </div>
         <div class="text-center">
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-primary" (click)="enviarDatosContacto()">Enviar</button>
         </div>
       </form>
     </div>

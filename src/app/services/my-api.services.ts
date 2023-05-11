@@ -11,10 +11,17 @@ export class MyApiService {
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
+  getDataArtista(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/artista_list/`);
   }
   createArtista(data: any) {
     return this.http.post<any>(`${this.apiUrl}/artista_detail/`, data)
+  }
+  //No hace falta por que no llamamos ninguna info de contacto
+  // getDataContacto(): Observable<any> {
+  //   return this.http.get<any>(`${this.apiUrl}/contacto_list/`);
+  // }
+  createContacto(data: any) {
+    return this.http.post<any>(`${this.apiUrl}/contacto_detail/`, data)
   }
 }

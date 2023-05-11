@@ -12,7 +12,7 @@ export class InicioComponent implements OnInit {
   constructor(private myApiService: MyApiService) { }
 
   ngOnInit(): void {
-    this.myApiService.getData().subscribe(response => {
+    this.myApiService.getDataArtista().subscribe(response => {
       this.data = response;
     });
   }
