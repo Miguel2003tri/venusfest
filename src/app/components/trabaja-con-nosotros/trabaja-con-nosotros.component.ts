@@ -33,8 +33,7 @@ export class TrabajaConNosotrosComponent implements OnInit  {
     .subscribe((data) => {
       this.router.navigate(['/'])
     })
-    // this.http.post('http://localhost/api/artista_detail/', this.modelo)
-    console.log("holi",this.artista);
+    
     
   }
 }

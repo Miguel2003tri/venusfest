@@ -16,6 +16,5 @@ export class MyApiService {
   }
   createArtista(data: any) {
     return this.http.post<any>(`${this.apiUrl}/artista_detail/`, data)
-    // .pipe(retry(1), catchError(this.handleError))
   }
 }
