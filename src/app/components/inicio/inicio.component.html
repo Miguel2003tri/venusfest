@@ -1,11 +1,19 @@
 <div class="container">
-  <h2 class="text-center pt-4">Artistas en Venus fest</h2>
+  <h2 class="text-center pt-4">Artistas en Venus Fest</h2>
+  <div class="text-center pt-3">
+    <form class="d-inline-flex align-items-center mx-auto">
+      <input class="form-control rounded-2 me-2" type="search" placeholder="Buscar" name="buscar" [(ngModel)]="nombreBusqueda">
+      <button class="btn btn-secondary rounded-2 my-2 my-sm-0" (click)="filtrarArtistas()" type="submit">Buscar</button>
+    </form>
+    
+  </div>
 </div>
+
 
 <div class="container mt-5 pb-5">
   <main class="container">
     <div class="row">
-      <div *ngFor="let item of data" class="col-lg-4 col-md-6 col-sm-12 p-3">
+      <div *ngFor="let item of dataTemporal" class="col-lg-4 col-md-6 col-sm-12 p-3">
         <div class="card">
           <img [src]="item.foto_artista" class="card-img-top" alt="Foto del artista">
           <div class="card-body">
