@@ -14,19 +14,24 @@ export class ContactoComponent implements OnInit {
     email: '',
     asunto: '',
     mensaje: '',
+    mostrarAlertas:false,
+
   }
   modelo: any = {};
 
   constructor(private http: MyApiService, public router: Router) { }
   ngOnInit(): void { }
 
+  cerrarAlerta() {
+    this.contacto.mostrarAlertas = false;
+  
+
+  }
+
   enviarDatosContacto() {
     let logError = 0
     const regexTelf = /^\d{9}$/;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    console.log(this.contacto.nombre);
-    
 
     if ( this.contacto.nombre === "") {
       logError++
@@ -46,18 +51,18 @@ export class ContactoComponent implements OnInit {
     console.log(logError);
     
     if (logError == 0) {
-      console.log("Dins");
-
       this.http.createContacto(this.contacto)
         .subscribe((data) => {
           this.router.navigate(['/'])
         })
+    }else{
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Hace que el desplazamiento sea suave
+      });
+      this.contacto.mostrarAlertas =true;
+
     }
-     //alert div
 
   }
-
-
-
-
 }

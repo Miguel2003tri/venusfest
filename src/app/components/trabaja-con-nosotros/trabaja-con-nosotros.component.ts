@@ -21,13 +21,17 @@ export class TrabajaConNosotrosComponent implements OnInit {
     disponibilidad: '',
     condiciones_participacion: '',
     foto_artista: '',
-
+    mostrarAlertas: false,
   }
   modelo: any = {};
 
   constructor(private http: MyApiService, public router: Router) { }
   ngOnInit(): void { }
+  cerrarAlerta() {
+    this.artista.mostrarAlertas = false;
+   
 
+  }
   enviarDatosNosotros() {
     let logError = 0
     const regexTelf = /^\d{9}$/;
@@ -67,7 +71,7 @@ export class TrabajaConNosotrosComponent implements OnInit {
     if (this.artista.condiciones_participacion === "") {
       logError++
     }
-//alert div
+
 
 
     console.log(logError);
@@ -76,7 +80,12 @@ export class TrabajaConNosotrosComponent implements OnInit {
         .subscribe((data) => {
           this.router.navigate(['/'])
         })
-
+    }else{
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Hace que el desplazamiento sea suave
+      });
+      this.artista.mostrarAlertas = true
     }
 
   }
