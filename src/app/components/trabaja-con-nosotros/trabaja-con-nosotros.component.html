@@ -15,7 +15,7 @@
   
       <form>
         <div class="row">
-          <div class="col">
+          <div class="col-sm-12 col-md-6">
             <div class="mb-3">
               <label for="nombre" class="form-label fw-bold text-dark">Nombre:</label>
               <input type="text" class="form-control rounded-3" id="nombre" name="nombre" [(ngModel)]="artista.nombre" placeholder="Ejemplo: Juan Pérez" required>
@@ -30,7 +30,7 @@
             </div>
           </div>
   
-          <div class="col">
+          <div class="col-sm-12 col-md-6">
             <div class="mb-3">
               <label for="correo" class="form-label fw-bold text-dark">Correo electrónico:</label>
               <input type="email" class="form-control rounded-3" id="correo" name="correo" [(ngModel)]="artista.email" placeholder="Ejemplo: juan@example.com" required>
@@ -51,7 +51,7 @@
           </div>
           
           <div class="row">
-            <div class="col">
+            <div class="col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="descripcion" class="form-label fw-bold text-dark">Descripción del proyecto:</label>
                 <textarea class="form-control rounded-3" id="descripcion" name="descripcion" rows="4" cols="50" [(ngModel)]="artista.descripcion_proyecto" required placeholder="Ejemplo: Breve descripción del proyecto"></textarea>
@@ -61,7 +61,7 @@
                 <textarea class="form-control rounded-3" id="tecnico" name="tecnico" rows="4" cols="50" [(ngModel)]="artista.requerimientos_tecnicos" placeholder="Ejemplo: Equipo necesario"></textarea>
               </div>
             </div>
-            <div class="col">
+            <div class="col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="experiencia" class="form-label fw-bold text-dark">Experiencia previa:</label>
                 <textarea class="form-control rounded-3" id="experiencia" name="experiencia" rows="4" cols="50" [(ngModel)]="artista.experiencia_previa" placeholder="Ejemplo: Proyectos anteriores"></textarea>

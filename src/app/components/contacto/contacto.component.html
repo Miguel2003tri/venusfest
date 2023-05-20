@@ -15,7 +15,7 @@
 
     <form>
       <div class="row">
-        <div class="col">
+        <div class="col-sm-12 col-md-6">
           <div class="mb-3">
             <label for="nombre" class="form-label fw-bold text-dark">Nombre:</label>
             <input type="text" class="form-control rounded-3" name="nombre" id="nombre" placeholder="Ej. Juan Pérez" [(ngModel)]="contacto.nombre" required>
@@ -26,7 +26,7 @@
           </div>
         </div>
         
-        <div class="col">
+        <div class="col-sm-12 col-md-6">
           <div class="mb-3">
             <label for="email" class="form-label fw-bold text-dark">Correo electrónico:</label>
             <input type="email" class="form-control rounded-3" name="email" id="email" placeholder="Ej. juan.perez@gmail.com" [(ngModel)]="contacto.email" required>
