@@ -5,7 +5,7 @@
   <div class="container">
     <div class="pb-5 pt-3 ps-5 pe-5">
       <div>
-        <div *ngIf="this.artista.mostrarAlertas" class="alert alert-danger">
+        <div *ngIf="this.alerta .mostrar_alertas" class="alert alert-danger">
           <div class="d-flex align-items-center ">
             <button type="button" class="btn btn-close me-2" aria-label="Cerrar" (click)="cerrarAlerta()"></button>
             <p class="m-0">Por favor, completa todos los campos obligatorios</p>
@@ -73,10 +73,10 @@
             </div>
           </div>
           
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <label for="imagen" class="form-label fw-bold text-dark">Imagen local:</label>
             <input type="file" class="form-control rounded-3" id="imagen" name="imagen" [(ngModel)]="artista.foto_artista">
-          </div>
+          </div> -->
           
           <div class="mb-3">
             <label for="imagenUrl" class="form-label fw-bold text-dark">Enlace de imagen:</label>

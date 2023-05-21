@@ -21,16 +21,16 @@ export class TrabajaConNosotrosComponent implements OnInit {
     disponibilidad: '',
     condiciones_participacion: '',
     foto_artista: '',
-    mostrarAlertas: false,
   }
+  @Input() alerta = {
+
+  mostrar_alertas: false,}
   modelo: any = {};
 
   constructor(private http: MyApiService, public router: Router) { }
   ngOnInit(): void { }
   cerrarAlerta() {
-    this.artista.mostrarAlertas = false;
-   
-
+    this.alerta.mostrar_alertas = false;
   }
   enviarDatosNosotros() {
     let logError = 0
@@ -40,44 +40,66 @@ export class TrabajaConNosotrosComponent implements OnInit {
 
     if (this.artista.nombre === "") {
       logError++
+      console.log('nombre');
+
     }
     if (this.artista.nombre_artistico === "") {
       logError++
+      console.log('nombre_artistico');
+
     }
-    if (this.artista.email === "" || regexEmail.test(this.artista.email)) {
+    if (this.artista.email === "" || !regexEmail.test(this.artista.email)) {
       logError++
+      console.log('email');
+
     }
-    if (this.artista.telf === ""||regexTelf.test(this.artista.telf)) {
-      logError++
+    if (this.artista.telf === ""|| !regexTelf.test(this.artista.telf)) {
+      logError++                              
+      console.log('telf');
+
     }
     if (this.artista.direccion_postal === "") {
       logError++
+      console.log('direccion_postal');
+
     }
     if (this.artista.descripcion_proyecto === "") {
       logError++
+      console.log('descripcion_proyecto');
+
     }
-    if (this.artista.enlaces_redes_sociales === "" || regexLink.test(this.artista.enlaces_redes_sociales)) {
+    if (this.artista.enlaces_redes_sociales === "" || !regexLink.test(this.artista.enlaces_redes_sociales)) {
       logError++
+      console.log('enlaces_redes_sociales');
+
     }
     if (this.artista.experiencia_previa === "") {
       logError++
+      console.log('experiencia_previa');
+
     }
     if (this.artista.requerimientos_tecnicos === "") {
       logError++
+      console.log('requerimientos_tecnicos');
+
     }
     if (this.artista.disponibilidad === "") {
       logError++
+      console.log('disponibilidad');
+
     }
     if (this.artista.condiciones_participacion === "") {
       logError++
+      console.log('condiciones_participacion');
+
+
     }
 
 
-
-    console.log(logError);
-    if (logError == 0) {
+    if (logError <=1) {
       this.http.createArtista(this.artista)
-        .subscribe((data) => {
+      .subscribe((data) => {
+          console.log(this.artista);
           this.router.navigate(['/'])
         })
     }else{
@@ -85,7 +107,7 @@ export class TrabajaConNosotrosComponent implements OnInit {
         top: 0,
         behavior: 'smooth' // Hace que el desplazamiento sea suave
       });
-      this.artista.mostrarAlertas = true
+      this.alerta.mostrar_alertas = true
     }
 
   }
