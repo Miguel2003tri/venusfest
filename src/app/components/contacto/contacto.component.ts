@@ -14,6 +14,10 @@ export class ContactoComponent implements OnInit {
     email: '',
     asunto: '',
     mensaje: '',
+
+  }
+  @Input() alerta = {
+   
     mostrarAlertas:false,
 
   }
@@ -23,7 +27,7 @@ export class ContactoComponent implements OnInit {
   ngOnInit(): void { }
 
   cerrarAlerta() {
-    this.contacto.mostrarAlertas = false;
+    this.alerta.mostrarAlertas = false;
   
 
   }
@@ -36,10 +40,10 @@ export class ContactoComponent implements OnInit {
     if ( this.contacto.nombre === "") {
       logError++
     }
-    if (this.contacto.telf==="" ||regexTelf.test(this.contacto.telf)) {
+    if (this.contacto.telf==="" || !regexTelf.test(this.contacto.telf)) {
       logError++
     } 
-    if ( this.contacto.email === "" || regexEmail.test(this.contacto.email)) {
+    if ( this.contacto.email === "" || !regexEmail.test(this.contacto.email)) {
       logError++
     } 
     if (this.contacto.asunto === "") {
@@ -60,7 +64,7 @@ export class ContactoComponent implements OnInit {
         top: 0,
         behavior: 'smooth' // Hace que el desplazamiento sea suave
       });
-      this.contacto.mostrarAlertas =true;
+      this.alerta.mostrarAlertas =true;
 
     }
 
