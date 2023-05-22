@@ -18,57 +18,57 @@
           <div class="col-sm-12 col-md-6">
             <div class="mb-3">
               <label for="nombre" class="form-label fw-bold text-dark">Nombre:</label>
-              <input type="text" class="form-control rounded-3" id="nombre" name="nombre" [(ngModel)]="artista.nombre" placeholder="Ejemplo: Juan Pérez" required>
+              <input tabindex="1" type="text" class="form-control rounded-3" id="nombre" name="nombre" [(ngModel)]="artista.nombre" placeholder="Ejemplo: Juan Pérez" required>
             </div>
             <div class="mb-3">
               <label for="nombre-artistico" class="form-label fw-bold text-dark">Nombre artístico:</label>
-              <input type="text" class="form-control rounded-3" id="nombre-artistico" name="nombre-artistico" [(ngModel)]="artista.nombre_artistico" placeholder="Ejemplo: Juanito" required>
+              <input  tabindex="30" type="text" class="form-control rounded-3" id="nombre-artistico" name="nombre-artistico" [(ngModel)]="artista.nombre_artistico" placeholder="Ejemplo: Juanito" required>
             </div>
             <div class="mb-3">
               <label for="redes" class="form-label fw-bold text-dark">Enlaces a redes sociales:</label>
-              <input type="url" class="form-control rounded-3" id="redes" name="redes" [(ngModel)]="artista.enlaces_redes_sociales" placeholder="Ejemplo: https://twitter.com/juanito">
+              <input  tabindex="50" type="url" class="form-control rounded-3" id="redes" name="redes" [(ngModel)]="artista.enlaces_redes_sociales" placeholder="Ejemplo: https://twitter.com/juanito">
             </div>
           </div>
   
           <div class="col-sm-12 col-md-6">
             <div class="mb-3">
               <label for="correo" class="form-label fw-bold text-dark">Correo electrónico:</label>
-              <input type="email" class="form-control rounded-3" id="correo" name="correo" [(ngModel)]="artista.email" placeholder="Ejemplo: juan@example.com" required>
+              <input  tabindex="20" type="email" class="form-control rounded-3" id="correo" name="correo" [(ngModel)]="artista.email" placeholder="Ejemplo: juan@example.com" required>
             </div>
             <div class="mb-3">
               <label for="telefono" class="form-label fw-bold text-dark">Teléfono:</label>
-              <input type="tel" class="form-control rounded-3" id="telefono" name="telefono" [(ngModel)]="artista.telf" placeholder="Ejemplo: 1234567890" required>
+              <input  tabindex="40" type="tel" class="form-control rounded-3" id="telefono" name="telefono" [(ngModel)]="artista.telf" placeholder="Ejemplo: 1234567890" required>
             </div>
             <div class="mb-3">
               <label for="direccion" class="form-label fw-bold text-dark">Dirección postal:</label>
-              <input type="text" class="form-control rounded-3" id="direccion" name="direccion" [(ngModel)]="artista.direccion_postal" placeholder="Ejemplo: Calle Principal 123" required>
+              <input  tabindex="60" type="text" class="form-control rounded-3" id="direccion" name="direccion" [(ngModel)]="artista.direccion_postal" placeholder="Ejemplo: Calle Principal 123" required>
             </div>
           </div>
         </div>
         <div class="mb-3">
             <label for="disponibilidad" class="form-label fw-bold text-dark">Disponibilidad:</label>
-            <input type="text" class="form-control rounded-3" id="disponibilidad" name="disponibilidad" [(ngModel)]="artista.disponibilidad" placeholder="Ejemplo: Tiempo completo">
+            <input  tabindex="70" type="text" class="form-control rounded-3" id="disponibilidad" name="disponibilidad" [(ngModel)]="artista.disponibilidad" placeholder="Ejemplo: Tiempo completo">
           </div>
           
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="descripcion" class="form-label fw-bold text-dark">Descripción del proyecto:</label>
-                <textarea class="form-control rounded-3" id="descripcion" name="descripcion" rows="4" cols="50" [(ngModel)]="artista.descripcion_proyecto" required placeholder="Ejemplo: Breve descripción del proyecto"></textarea>
+                <textarea  tabindex="80" class="form-control rounded-3" id="descripcion" name="descripcion" rows="4" cols="50" [(ngModel)]="artista.descripcion_proyecto" required placeholder="Ejemplo: Breve descripción del proyecto"></textarea>
               </div>
               <div class="mb-3">
                 <label for="tecnico" class="form-label fw-bold text-dark">Requerimientos técnicos:</label>
-                <textarea class="form-control rounded-3" id="tecnico" name="tecnico" rows="4" cols="50" [(ngModel)]="artista.requerimientos_tecnicos" placeholder="Ejemplo: Equipo necesario"></textarea>
+                <textarea  tabindex="100" class="form-control rounded-3" id="tecnico" name="tecnico" rows="4" cols="50" [(ngModel)]="artista.requerimientos_tecnicos" placeholder="Ejemplo: Equipo necesario"></textarea>
               </div>
             </div>
             <div class="col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="experiencia" class="form-label fw-bold text-dark">Experiencia previa:</label>
-                <textarea class="form-control rounded-3" id="experiencia" name="experiencia" rows="4" cols="50" [(ngModel)]="artista.experiencia_previa" placeholder="Ejemplo: Proyectos anteriores"></textarea>
+                <textarea  tabindex="90" class="form-control rounded-3" id="experiencia" name="experiencia" rows="4" cols="50" [(ngModel)]="artista.experiencia_previa" placeholder="Ejemplo: Proyectos anteriores"></textarea>
               </div>
               <div class="mb-3">
                 <label for="condiciones" class="form-label fw-bold text-dark">Condiciones de participación:</label>
-                <textarea class="form-control rounded-3" id="condiciones" name="condiciones" rows="4" cols="50" [(ngModel)]="artista.condiciones_participacion" placeholder="Ejemplo: Términos y condiciones"></textarea>
+                <textarea  tabindex="110" class="form-control rounded-3" id="condiciones" name="condiciones" rows="4" cols="50" [(ngModel)]="artista.condiciones_participacion" placeholder="Ejemplo: Términos y condiciones"></textarea>
               </div>
             </div>
           </div>

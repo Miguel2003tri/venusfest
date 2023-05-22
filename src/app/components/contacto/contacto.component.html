@@ -18,28 +18,28 @@
         <div class="col-sm-12 col-md-6">
           <div class="mb-3">
             <label for="nombre" class="form-label fw-bold text-dark">Nombre:</label>
-            <input type="text" class="form-control rounded-3" name="nombre" id="nombre" placeholder="Ej. Juan Pérez" [(ngModel)]="contacto.nombre" required>
+            <input tabindex="1" type="text" class="form-control rounded-3" name="nombre" id="nombre" placeholder="Ej. Juan Pérez" [(ngModel)]="contacto.nombre" required>
           </div>
           <div class="mb-3">
             <label for="telf" class="form-label fw-bold text-dark">Teléfono:</label>
-            <input type="tel" class="form-control rounded-3" name="telf" id="telf" placeholder="Ej. +34 123 456 789" [(ngModel)]="contacto.telf" required>
+            <input tabindex="30" type="tel" class="form-control rounded-3" name="telf" id="telf" placeholder="Ej. +34 123 456 789" [(ngModel)]="contacto.telf" required>
           </div>
         </div>
         
         <div class="col-sm-12 col-md-6">
           <div class="mb-3">
             <label for="email" class="form-label fw-bold text-dark">Correo electrónico:</label>
-            <input type="email" class="form-control rounded-3" name="email" id="email" placeholder="Ej. juan.perez@gmail.com" [(ngModel)]="contacto.email" required>
+            <input tabindex="20" type="email" class="form-control rounded-3" name="email" id="email" placeholder="Ej. juan.perez@gmail.com" [(ngModel)]="contacto.email" required>
           </div>
           <div class="mb-3">
             <label for="asunto" class="form-label fw-bold text-dark">Asunto:</label>
-            <input type="text" class="form-control rounded-3" name="asunto" id="asunto" placeholder="Ej. Solicitud de información" [(ngModel)]="contacto.asunto" required>
+            <input tabindex="40" type="text" class="form-control rounded-3" name="asunto" id="asunto" placeholder="Ej. Solicitud de información" [(ngModel)]="contacto.asunto" required>
           </div>
         </div>
       </div>
       <div class="mb-3">
         <label for="mensaje" class="form-label fw-bold text-dark">Mensaje:</label>
-        <textarea class="form-control rounded-3" name="mensaje" id="mensaje" rows="3" [(ngModel)]="contacto.mensaje" required></textarea>
+        <textarea tabindex="50" class="form-control rounded-3" name="mensaje" id="mensaje" rows="3" [(ngModel)]="contacto.mensaje" required></textarea>
       </div>
       <div class="form-check mb-3">
         <input class="form-check-input" type="checkbox" id="aceptar-cookies">
