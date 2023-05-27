@@ -1,7 +1,8 @@
 svg{
+    padding-top: 15px;
     fill: white;
-    height: 75%;
-    width: 75%;
+    height: 44px;
+    width: 44px;
 }
 .logo{
     height: 15vh;
