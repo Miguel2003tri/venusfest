@@ -20,9 +20,9 @@ export class InicioComponent implements OnInit {
 
     });
   }
-
+  // Función para filtrar los artistas
   filtrarArtistas(): void {
-    console.log(this.data);
+  // Filtrar la data basado en el nombre del artista
     this.dataTemporal = this.data.filter((item: any) => item.nombre_artistico.toLowerCase().includes(this.nombreBusqueda.toLowerCase()));
     console.log(this.nombreBusqueda);
   }

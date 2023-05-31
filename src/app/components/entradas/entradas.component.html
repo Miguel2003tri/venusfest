@@ -33,38 +33,54 @@
                         <label for="fecha" class="form-label  fw-bold text-dark">Fecha de nacimiento:</label>
                         <input type="date" class="form-control rounded-3" id="fecha">
                     </div>
+                    <!-- <div class="mb-3">
+                        <label for="cantidadEntradas" class="form-label fw-bold text-dark">Cantidad de entradas:</label>
+                        <select class="form-select rounded-3" id="cantidadEntradas" [(ngModel)]="cantidadEntradas" (change)="agregarParticipante()">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="3">4</option>
+                          <option value="3">5</option>
+
+                        </select>
+                    </div> -->
                 </div>
 
                 <div class="col-sm-12 col-md-6">
 
                     <h4>Datos de los asistentes</h4>
+                      <!-- <div *ngFor="let participante of participantes; let i = index">
+                        <h5>Participante {{ i + 1 }}</h5> -->
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label fw-bold  text-dark ">Nombre completo:</label>
+                            <input type="text" class="form-control rounded-3" id="nombre" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label fw-bold text-dark">Dirección de correo
+                                electrónico:</label>
+                            <input type="email" class="form-control rounded-3 " id="correo"
+                                placeholder="Ej. juan.perez@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label fw-bold text-dark">Número de teléfono:</label>
+                            <input type="tel" class="form-control rounded-3" id="telefono"
+                                placeholder="Ej. +34 123 456 789">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label  fw-bold text-dark">Fecha de nacimiento:</label>
+                            <input type="date" class="form-control rounded-3" id="fecha">
+                        </div>
+                        <div class="mb-3">
+                            <label for="genero" class="form-label fw-bold text-dark">Género:</label>
+                            <select class="form-select rounded-3" id="genero">
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label fw-bold  text-dark ">Nombre completo:</label>
-                        <input type="text" class="form-control rounded-3" id="nombre" placeholder="Ej. Juan Pérez">
-                    </div>
-                    <div class="mb-3">
-                        <label for="correo" class="form-label fw-bold text-dark">Dirección de correo
-                            electrónico:</label>
-                        <input type="email" class="form-control rounded-3 " id="correo"
-                            placeholder="Ej. juan.perez@gmail.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="telefono" class="form-label fw-bold text-dark">Número de teléfono:</label>
-                        <input type="tel" class="form-control rounded-3" id="telefono"
-                            placeholder="Ej. +34 123 456 789">
-                    </div>
-                    <div class="mb-3">
-                        <label for="fecha" class="form-label  fw-bold text-dark">Fecha de nacimiento:</label>
-                        <input type="date" class="form-control rounded-3" id="fecha">
-                    </div>
-                    <div class="mb-3">
-                        <label for="genero" class="form-label fw-bold text-dark">Género:</label>
-                        <select class="form-select rounded-3" id="genero">
-                            <option value="masculino">Masculino</option>
-                            <option value="femenino">Femenino</option>
-                            <option value="otro">Otro</option>
-                        </select>
+
+
                     </div>
 
                 </div>
@@ -72,7 +88,7 @@
                     <button type="submit" class="btn btn-primary rounded-3">Pagar</button>
                 </div>
 
-            </div>
+            <!-- </div> -->
 
         </form>
 

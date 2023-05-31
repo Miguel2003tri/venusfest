@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent implements OnInit {
+    // Propiedad de entrada para el objeto contacto
+
   @Input() contacto = {
     nombre: '',
     telf: '',
@@ -15,7 +17,9 @@ export class ContactoComponent implements OnInit {
     asunto: '',
     mensaje: '',
 
-  }
+  }  
+  // Propiedad de entrada para el objeto alerta
+
   @Input() alerta = {
    
     mostrarAlertas:false,
@@ -25,13 +29,15 @@ export class ContactoComponent implements OnInit {
 
   constructor(private http: MyApiService, public router: Router) { }
   ngOnInit(): void { }
+  // Función para cerrar la alerta
 
   cerrarAlerta() {
     this.alerta.mostrarAlertas = false;
   
 
   }
-
+  
+  // Verificar los campos y contar los errores
   enviarDatosContacto() {
     let logError = 0
     const regexTelf = /^\d{9}$/;

@@ -13,7 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
 import { MyApiService } from './services/my-api.services'; // Importar el servicio
 
-
+//rutas
 const Route:Routes=[ 
   {path:'',component:InicioComponent},
   {path:'entradas',component:EntradasComponent},
@@ -42,8 +42,8 @@ const Route:Routes=[
     HttpClientModule ,
   ],
   
-  providers: [MyApiService],
-  bootstrap: [AppComponent],
+  providers: [MyApiService], // Agrega el servicio como proveedor
+  bootstrap: [AppComponent], // Agrega bootstrap
 
 })
 export class AppModule { }
